@@ -18,7 +18,7 @@ class EpisodesTableSeeder extends Seeder
  
         
         for($mov_id = 1; $mov_id <= 12; $mov_id++){
-            for($i = 1; $i <= 42; $i++){
+            for($i = 1; $i <= 9; $i++){
                 DB::table('episodes')->insert([
                     'movie_id' => $mov_id,
                     'episode' => $i,

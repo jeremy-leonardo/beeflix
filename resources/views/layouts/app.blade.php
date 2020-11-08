@@ -33,15 +33,15 @@
 
 <body>
 
-    @yield('content')
+    <div class="non-footer pb-3">
 
-    <div class="mt-5">
-        @include('layouts._partials.footer')
+        @yield('content')
+
     </div>
 
+    @include('layouts._partials.footer')
 
     @include('layouts._partials.script')
-    @yield('script')
 
 </body>
 

@@ -1,13 +1,12 @@
 @extends('layouts.app')
 
 @prepend('styles')
-<link rel="stylesheet" href="{{asset('css/home.css')}}?key=<?php echo date('d-M-y'); ?>" />
+<link rel="stylesheet" href="{{asset('css/index.css')}}?key=<?php echo date('d-M-y'); ?>" />
 @endprepend
 
 @section('content')
 
 @include('layouts._partials.header')
-
 
 <div class="container">
 
@@ -16,7 +15,9 @@
 
     <div class="mt-5">
         <h2>
-            {{$genre->name}}
+            <a href="/genre/{{$genre->id}}">
+                {{$genre->name}}
+            </a>
         </h2>
         <div class="row">
             @foreach($genre->movies as $movie)
@@ -31,14 +32,15 @@
                         </h5>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-primary btn-md btn-block">Lihat Film</button>
+                        <a href="/movie/{{$movie->id}}">
+                            <button type="button" class="btn btn-primary btn-md btn-block">Lihat Film</button>
+                        </a>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
-
 
     @endforeach
 
