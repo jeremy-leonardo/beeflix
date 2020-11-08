@@ -23,7 +23,11 @@
             <h3>
                 {{$movie->title}}
             </h3>
-            <div class="mb-3">{{$movie->rating}}</div>
+            <div class="mb-3">
+                <?php for($i = 1; $i <= $movie->rating; $i++)echo('★');
+                    for($i = 1; $i < 5-$movie->rating+1; $i++)echo('☆'); ?>
+                {{$movie->rating}}
+            </div>
             <p>
                 {{$movie->description}}
             </p>
