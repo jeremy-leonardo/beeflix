@@ -20,8 +20,8 @@ class CreateMoviesTable extends Migration
             $table->string('title');
             $table->string('photo');
             $table->text('description');
-            $table->float('rating', 1, 1);
-            $table->timestamps();
+            $table->decimal('rating', 4, 2);
+            // $table->timestamps();
         });
     }
 

@@ -19,7 +19,7 @@ class CreateEpisodesTable extends Migration
             $table->foreign('movie_id')->references('id')->on('movies');
             $table->integer('episode');
             $table->string('title');
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
 
