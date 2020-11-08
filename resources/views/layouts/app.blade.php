@@ -35,7 +35,9 @@
 
     @yield('content')
 
-    @include('layouts._partials.footer')
+    <div class="mt-5">
+        @include('layouts._partials.footer')
+    </div>
 
 
     @include('layouts._partials.script')

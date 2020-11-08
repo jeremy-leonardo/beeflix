@@ -1,0 +1,13 @@
+.mov-thumbnail {
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+}
+
+.mov-title{
+    min-height: 60px;
+}
+
+.bg-gray{
+    background-color: gray;
+}

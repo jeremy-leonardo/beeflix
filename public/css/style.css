@@ -3,43 +3,8 @@
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
-body {
-  font-family: "Roboto", sans-serif;
-  max-width: 100%;
-}
-
-/* .content {
-  min-height: 100vh;
-} */
-
-.row {
-  margin: 0px;
-}
-
-.btn-primary {
-  background: #ff6b00 !important;
-  border-color: #ff6b00 !important;
-  font-weight: medium;
-  font-size: 18px;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.05em;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 6px;
-}
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:after,
-.btn-primary:active:after {
-  background: rgb(255, 126, 34) !important;
-  border-color: rgb(255, 126, 34) !important;
-}
-.btn-primary:disabled {
-  background: rgb(143, 127, 116) !important;
-  border-color: rgb(143, 127, 116) !important;
+footer {
+  background: #f3f3f3;
 }
 
 .cursor-pointer {

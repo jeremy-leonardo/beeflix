@@ -9,4 +9,5 @@
 
 <!-- Main css -->
 <link rel="stylesheet" href="{{asset('/css/style.css')}}?key=<?php echo date('d-M-y'); ?>" />
+
 @stack('styles')
