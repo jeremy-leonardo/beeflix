@@ -15,23 +15,21 @@ class MovieController extends Controller
     {
         $genres = Genre::all();
 
-        return view('index', ['genres' => $genres, 'all_genres' => $genres]);
+        return view('index', ['genres' => $genres]);
     }
 
     public function detail($id)
     {
         $movie = Movie::find($id);
-        $all_genres = Genre::all();
 
         $episodes = Episode::where('movie_id', '=', $id)->paginate(3);
-        return view('detail', ['movie' => $movie, 'episodes' => $episodes, 'all_genres' => $all_genres]);
+        return view('detail', ['movie' => $movie, 'episodes' => $episodes]);
     }
 
     public function listByGenre($id)
     {
         $genres = [Genre::find($id)];
-        $all_genres = Genre::all();
 
-        return view('index', ['genres' => $genres, 'all_genres' => $all_genres]);
+        return view('index', ['genres' => $genres]);
     }
 }

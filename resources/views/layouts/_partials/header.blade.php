@@ -16,7 +16,7 @@
                             Genres
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            @foreach($all_genres as $genre)
+                            @foreach(App\Genre::all() as $genre)
                             <a class="dropdown-item" href="/genre/{{$genre->id}}">{{$genre->name}}</a>
                             @endforeach
                         </div>
@@ -25,4 +25,28 @@
             </div>
         </div>
     </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="{{ url()->previous() }}"><button type="button" class="btn btn-secondary btn-sm" action="action">← Kembali</button></a>
+                    <a href="/"><button type="button" class="btn btn-outline-secondary btn-sm">Lihat Semua Film</button></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </div>
+
+{{-- 
+<script>
+    function back() {
+        fallback = '/';
+        var prevPage = window.location.href;
+        window.history.go(-1);
+        setTimeout(function() {
+            if (window.location.href == prevPage) {
+                window.location.href = fallback;
+            }
+        }, 500);
+    }
+</script> --}}
