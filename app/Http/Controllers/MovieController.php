@@ -14,6 +14,14 @@ class MovieController extends Controller
     public function index()
     {
         $genres = Genre::all();
+        for ($i = 0; $i < $genres->count(); $i++) {
+            $limit = 4;
+            if ($genres[$i]->movies->count() < $limit) $limit = $genres[$i]->movies->count();
+            for ($k = 0; $k < $limit; $k++) {
+                $genres[$i]->movies = $genres[$i]->movies->slice(0, $limit);
+            }
+        }
+        // Untuk membatasi agar di index (home) hanya tampil 4 movie per genre
 
         return view('index', ['genres' => $genres]);
     }
