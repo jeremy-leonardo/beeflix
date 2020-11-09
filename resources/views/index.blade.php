@@ -14,11 +14,16 @@
     @foreach($genres as $genre)
 
     <div class="mb-5 mt-3">
-        <h2>
-            <a class="text-danger" href="/genre/{{$genre->id}}">
-                {{$genre->name}}
-            </a>
-        </h2>
+        <div>
+            <h2 class="d-inline">
+                <a class="text-dark" href="/genre/{{$genre->id}}">
+                    {{$genre->name}}
+                </a>
+            </h2> &nbsp;
+            @if(request()->is('/'))
+            <a class="text-danger" href="/genre/{{$genre->id}}">View All {{$genre->name}}</a>
+            @endif
+        </div>
         <div class="row">
             @foreach($genre->movies as $movie)
             <div class="col-xl-3 col-md-6 col-12 mt-4">
