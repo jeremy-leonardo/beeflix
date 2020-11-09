@@ -29,7 +29,7 @@
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a href="{{ url()->previous() }}"><button type="button" class="btn btn-secondary btn-sm" action="action">← Kembali</button></a>
+                    <button type="button" class="btn btn-secondary btn-sm" action="action" onclick="back()">← Kembali</button>
                     <a href="/"><button type="button" class="btn btn-outline-secondary btn-sm">Lihat Semua Film</button></a>
                 </li>
             </ul>
@@ -37,16 +37,17 @@
     </nav>
 </div>
 
-{{-- 
+@push('inline-scripts')
 <script>
     function back() {
         fallback = '/';
-        var prevPage = window.location.href;
+        var previous = window.location.href;
         window.history.go(-1);
         setTimeout(function() {
-            if (window.location.href == prevPage) {
+            if (window.location.href == previous) {
                 window.location.href = fallback;
             }
         }, 500);
     }
-</script> --}}
+</script>
+@endpush
