@@ -1,5 +1,5 @@
 <div class="navigation-bar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
             <a class="navbar-brand" href="/"><b>Beeflix</b></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,10 +8,10 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item {{ (request()->is('/')) ? 'active' : '' }}">
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown {{ (request()->segment(1)) == 'genre' ? 'active' : '' }}">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Genres
                         </a>
@@ -25,12 +25,11 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white pt-0">
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <button type="button" class="btn btn-secondary btn-sm" action="action" onclick="back()">← Kembali</button>
-                    <a href="/"><button type="button" class="btn btn-outline-secondary btn-sm">Lihat Semua Film</button></a>
+                    <button type="button" class="btn btn-danger btn-sm back-btn" action="action" onclick="back()">← Kembali</button><a href="/"><button type="button" class="btn btn-outline-dark btn-sm view-all-btn">Lihat Semua Film</button></a>
                 </li>
             </ul>
         </div>
@@ -49,5 +48,6 @@
             }
         }, 500);
     }
+
 </script>
 @endpush

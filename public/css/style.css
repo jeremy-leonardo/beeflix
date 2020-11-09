@@ -3,7 +3,11 @@
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
-.non-footer{
+body {
+  background-color: #f8f9fa;
+}
+
+.non-footer {
   min-height: calc(100vh - 100px);
   margin-bottom: 40px;
 }
@@ -21,9 +25,28 @@ a {
   text-decoration: none !important;
 }
 
-.navigation-bar{
+.navigation-bar {
   top: 0px;
   z-index: 99;
   width: 100%;
   position: sticky !important;
+}
+
+.page-item.active .page-link {
+  background-color: #bd2130;
+  border-color: #bd2130;
+}
+.page-link {
+  color: #bd2130;
+}
+
+.back-btn {
+  border-radius: 8px 0px 0px 8px;
+  margin-right: 0px;
+}
+
+.view-all-btn {
+  border-radius: 0px 8px 8px 0px;
+  margin-left: 0px;
+  border-left: 0px;
 }

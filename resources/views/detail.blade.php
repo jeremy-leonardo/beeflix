@@ -31,7 +31,7 @@
             <p>
                 {{$movie->description}}
             </p>
-            <p>Genre: <a href="/genre/{{$movie->genre->id}}">{{$movie->genre->name}}</a></p>
+            <p>Genre: <a class="text-danger" href="/genre/{{$movie->genre->id}}">{{$movie->genre->name}}</a></p>
         </div>
         <div class="col-md-5 col-12 mt-2">
 
