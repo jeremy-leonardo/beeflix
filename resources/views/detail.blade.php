@@ -24,8 +24,9 @@
                 {{$movie->title}}
             </h3>
             <div class="mb-3">
-                <?php for($i = 1; $i <= $movie->rating; $i++)echo('★');
-                    for($i = 1; $i < 5-$movie->rating+1; $i++)echo('☆'); ?>
+                <span class="star-rating">
+                    <?php for($i = 1; $i <= $movie->rating; $i++)echo('★');
+                    for($i = 1; $i < 5-$movie->rating+1; $i++)echo('☆'); ?></span>
                 {{$movie->rating}}
             </div>
             <p>

@@ -33,11 +33,11 @@ a {
 }
 
 .page-item.active .page-link {
-  background-color: #bd2130;
-  border-color: #bd2130;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 .page-link {
-  color: #bd2130;
+  color: #dc3545;
 }
 
 .back-btn {
