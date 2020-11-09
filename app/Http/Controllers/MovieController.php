@@ -21,7 +21,7 @@ class MovieController extends Controller
                 $genres[$i]->movies = $genres[$i]->movies->slice(0, $limit);
             }
         }
-        // Untuk membatasi agar di index (home) hanya tampil 4 movie per genre
+        // Untuk membatasi agar di index (home) hanya tampil 4 movie per genre, apabila kurang dari 4 maka muncul seadanya
 
         return view('index', ['genres' => $genres]);
     }
