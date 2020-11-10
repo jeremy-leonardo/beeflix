@@ -17,12 +17,12 @@ class EpisodesTableSeeder extends Seeder
         $faker = Faker::create('id_ID');
  
         
-        for($mov_id = 1; $mov_id <= 12; $mov_id++){
+        for($mov_id = 1; $mov_id <= 16; $mov_id++){
             for($i = 1; $i <= 9; $i++){
                 DB::table('episodes')->insert([
                     'movie_id' => $mov_id,
                     'episode' => $i,
-                    'title' => $faker->text(10),
+                    'title' => $faker->words(2, true),
                 ]);
             }
     	}
